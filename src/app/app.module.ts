@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FormClientComponent } from './form-client/form-client.component';
-import { ListClientComponent } from './list-client/list-client.component';
+import { FormClientComponent } from './client/form-client/form-client.component';
+import { ListClientComponent } from './client/list-client/list-client.component';
+import { ClientService } from './client/client.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { ListClientComponent } from './list-client/list-client.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

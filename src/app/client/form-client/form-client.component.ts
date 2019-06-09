@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Client } from '../client.model';
 
 @Component({
   selector: 'cmo-form-client',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-client.component.css']
 })
 export class FormClientComponent implements OnInit {
-
+  
+  @Input() client: Client
   constructor() { }
 
   ngOnInit() {

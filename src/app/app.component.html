@@ -1,7 +1,13 @@
-<cmo-form-client>
+<cmo-form-client></cmo-form-client>
 
-</cmo-form-client>
-
-<cmo-list-client>
-  
-</cmo-list-client>
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+    </tr>
+    <div *ngFor="let client of clients">
+        <cmo-list-client [client]="client">
+        </cmo-list-client>
+    </div>
+</table>

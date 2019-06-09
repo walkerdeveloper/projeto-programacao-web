@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Client } from '../client.model';
 
 @Component({
   selector: 'cmo-list-client',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListClientComponent implements OnInit {
 
-  constructor() { }
+  @Input() client: Client
+  
+  
+
+  constructor() {}
 
   ngOnInit() {
   }
