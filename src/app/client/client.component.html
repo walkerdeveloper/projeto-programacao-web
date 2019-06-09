@@ -1,7 +1,8 @@
-<cmo-form-client>
+<cmo-form-client [client]="selectedClient" [updateList]="updateList">
 
 </cmo-form-client>
 
-<cmo-list-client>
+<!-- '(selectedClientEvent)="editClient($event)"' : diz que o captura o output emitido ao clicar em ediatar -->
+<cmo-list-client (selectedClientEvent)="editClient($event)" [updateList]="updateList">
 
 </cmo-list-client>

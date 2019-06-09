@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Client } from './client/client.model';
-import { ClientService } from './client/client.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'cmo-root',
@@ -8,12 +6,6 @@ import { ClientService } from './client/client.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  clients: Client[]
 
-  constructor(private clientService: ClientService){ }
 
-  ngOnInit(){
-    this.clients = this.clientService.clients()
-  }
 }

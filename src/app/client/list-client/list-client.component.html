@@ -1,12 +1,21 @@
 <table>
 
-  <tr>
-    <th>Nome</th>
-    <th>E-mail</th>
-    <th>Telefone</th>
-  </tr>
-  <tr>
-    
-  </tr>
+    <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>CPF</th>
+        <th>Ações</th>
+    </tr>
+    <tr *ngFor="let client of clients">
+        <th>{{client.nome}}</th>
+        <th>{{client.email}}</th>
+        <th>{{client.telefone}}</th>
+        <th>{{client.cpf}}</th>
+        <th>
+            <button (click)="remove(client)">Apagar</button>
+            <button (click)="edit(client)">Editar</button>
+        </th>
+    </tr>
 
 </table>
